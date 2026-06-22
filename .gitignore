@@ -1,0 +1,10 @@
+.env
+.env.*
+node_modules/
+npm-debug.log*
+*.swp
+*.swo
+*~
+.DS_Store
+.vscode/
+.idea/
