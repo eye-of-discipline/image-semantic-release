@@ -1,0 +1,14 @@
+services:
+  semantic-release:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: image-semantic-release:local
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    environment:
+      GH_TOKEN: ${GH_TOKEN:-}
+      GL_TOKEN: ${GL_TOKEN:-}
+      NPM_TOKEN: ${NPM_TOKEN:-}
+    command: ["--dry-run", "--no-ci"]
