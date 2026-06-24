@@ -15,6 +15,8 @@ RUN apt-get update \
         ca-certificates \
         curl \
         git \
+        jq \
+        yq \
         openssh-client \
         xz-utils \
     && arch="$(dpkg --print-architecture)" \
